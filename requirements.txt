@@ -1,2 +1,5 @@
-flask
+fastapi
+uvicorn
 gunicorn
+qiskit
+python-dotenv
