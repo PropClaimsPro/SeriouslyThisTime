@@ -1,1 +1,0 @@
-# Continuous reinvestment with dynamic allocation
