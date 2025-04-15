@@ -1,0 +1,21 @@
+name: letsgofrorreale
+services:
+  - name: profit-app
+    github:
+      repo: PropClaimsPro/LetsGoFrorreale
+      branch: main
+      deploy_on_push: true
+    envs:
+      - key: ETH_WALLET_ADDRESS
+        scope: RUN_AND_BUILD_TIME
+        type: SECRET
+        value: 0xEe020f2073b899e17f87Deecc5D904E7b1E4fB1d
+      - key: DIGITAL_OCEAN_TOKEN
+        scope: RUN_AND_BUILD_TIME
+        type: SECRET
+        value: your_encrypted_digital_ocean_token_here
+    run_command: python main.py
+    build_command: pip install -r requirements.txt
+    http_port: 8080
+    instance_count: 1
+    instance_size_slug: basic-xxs

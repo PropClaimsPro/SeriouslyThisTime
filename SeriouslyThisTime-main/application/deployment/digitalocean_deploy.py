@@ -1,0 +1,1 @@
+# Automated DigitalOcean droplet and container setup
