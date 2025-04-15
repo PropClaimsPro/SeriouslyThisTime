@@ -1,0 +1,4 @@
+1. Create a DigitalOcean droplet (Ubuntu 22.04).
+2. Install Docker, Python 3, and unzip package.
+3. Configure .env and config.ini with your real credentials and API keys.
+4. Run `python3 main.py` from project root to launch all modules.
