@@ -8,14 +8,17 @@ ENV PYTHONUNBUFFERED 1
 # Set working directory
 WORKDIR /app
 
-# Copy all files
+# Copy requirements first to leverage Docker cache
+COPY requirements.txt .
+
+# Install all dependencies including Qiskit and FastAPI
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Copy all source code
 COPY . .
 
-# Install dependencies
-RUN pip install --no-cache-dir flask gunicorn
-
 # Expose the port
-EXPOSE 8080
+EXPOSE 8000
 
-# Run the application using Gunicorn
-CMD ["gunicorn", "--bind", "0.0.0.0:8080", "main:app"]
+# Run the FastAPI app using Gunicorn with Uvicorn worker
+CMD ["gunicorn", "--workers=4", "--bind=0.0.0.0:8000", "api.main:app", "-k", "uvicorn.workers.UvicornWorker"]
