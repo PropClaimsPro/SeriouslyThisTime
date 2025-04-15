@@ -1,0 +1,15 @@
+flask
+ccxt
+web3
+cryptography
+openai
+langchain
+transformers
+huggingface_hub
+qiskit
+boto3
+python-dotenv
+numpy
+pandas
+scikit-learn
+sqlite-utils
