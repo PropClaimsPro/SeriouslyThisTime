@@ -1,1 +1,0 @@
-print("🚀 ARC_SUPERNOVA MAIN EXECUTED")
