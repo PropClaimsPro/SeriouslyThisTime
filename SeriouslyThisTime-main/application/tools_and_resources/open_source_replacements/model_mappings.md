@@ -1,1 +1,0 @@
-Maps proprietary tools to open-source equivalents

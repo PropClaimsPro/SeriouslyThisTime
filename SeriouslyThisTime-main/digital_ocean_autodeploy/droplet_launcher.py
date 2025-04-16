@@ -1,1 +1,0 @@
-# Full infrastructure bootstrap on DigitalOcean
