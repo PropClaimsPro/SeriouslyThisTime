@@ -1,4 +1,5 @@
 flask
+gunicorn
 web3
 openai
 requests
