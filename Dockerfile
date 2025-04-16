@@ -1,6 +1,7 @@
+
 FROM python:3.11-slim
 
-# Upgrade pip and install dependencies
+# Upgrade pip and install runtime dependencies
 RUN apt-get update && apt-get install -y gcc \
     && python -m pip install --upgrade pip \
     && pip install --no-cache-dir gunicorn flask web3 openai requests \
