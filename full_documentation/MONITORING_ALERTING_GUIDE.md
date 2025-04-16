@@ -1,1 +1,0 @@
-Complete real-time monitoring and alerting setup instructions.
