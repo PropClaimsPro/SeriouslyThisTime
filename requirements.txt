@@ -1,0 +1,4 @@
+requests
+flask
+web3
+openai
