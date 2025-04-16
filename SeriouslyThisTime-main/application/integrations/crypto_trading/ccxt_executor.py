@@ -1,1 +1,0 @@
-# CCXT-based multi-exchange trade engine

@@ -1,1 +1,0 @@
-# Quantum computing module using Qiskit for optimization strategies
