@@ -1,4 +1,3 @@
-
 from flask import Flask
 from routes.status import status
 from routes.debug import debug
@@ -13,28 +12,24 @@ app = Flask(__name__)
 
 @app.route("/")
 def health():
-    return "✅ ARC_SUPERNOVA is live."
+    return "✅ ARC_SUPERNOVA Phase 4 is live"
 
 @app.route("/status")
-def route_status():
-    return status()
+def route_status(): return status()
 
 @app.route("/debug")
-def route_debug():
-    return debug()
+def route_debug(): return debug()
 
 @app.route("/trigger/<phase>")
-def trigger_route(phase):
-    return trigger_phase(phase)
+def route_trigger(phase): return trigger_phase(phase)
 
 @app.route("/report")
-def route_report():
-    return report()
+def route_report(): return report()
 
 @app.route("/signal")
 def route_signal():
-    send_signal_alert("+15044203332", "🧠 PROFIT ALERT FROM ARC_SUPERNOVA")
-    return "✅ Signal Alert Sent"
+    send_signal_alert("+15044203332", "🧠 ARC_SUPERNOVA profit signal triggered.")
+    return "✅ Signal sent"
 
 run_all_strategies()
 optimize_loop()
