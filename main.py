@@ -1,15 +1,14 @@
-from phase_v_replication import launch_phase_v_replication
-from wallet_encryption import get_encrypted_wallet_key
-import time
+from flask import Flask
 
-def main():
-    print("[BOOT] Autonomous Profit Engine initializing...")
-    key = get_encrypted_wallet_key()
-    print(f"[WALLET] Decrypted key active.")
-    launch_phase_v_replication()
-    while True:
-        print("[ENGINE] Executing live profit strategies...")
-        time.sleep(10)
+# Initialize Flask app
+app = Flask(__name__)
 
-if __name__ == "__main__":
-    main()
+# Health check endpoint for DigitalOcean
+@app.route("/")
+def health():
+    return "✅ ARC_SUPERNOVA is alive and healthy", 200
+
+# No need to call app.run(); gunicorn handles it
+# If running locally, you can optionally include:
+# if __name__ == "__main__":
+#     app.run(host="0.0.0.0", port=8501)
