@@ -1,0 +1,1 @@
+def regenerate(): print('Regenerating via GPT.')

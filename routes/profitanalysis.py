@@ -1,0 +1,1 @@
+def profitanalysis(): return {'profit': '$12345', 'runtime_minutes': 999}

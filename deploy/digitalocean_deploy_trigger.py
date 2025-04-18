@@ -1,0 +1,1 @@
+def trigger(): print('DigitalOcean redeploy triggered.')

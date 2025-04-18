@@ -1,0 +1,1 @@
+def run(): print('Executing zero-cost strategies.')

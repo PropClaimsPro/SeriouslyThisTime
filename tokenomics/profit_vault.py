@@ -1,0 +1,1 @@
+def vault(): print('Routing profits to vault.')

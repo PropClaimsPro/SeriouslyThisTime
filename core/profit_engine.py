@@ -1,0 +1,1 @@
+def run_all_strategies(): print('Running profit strategies.')

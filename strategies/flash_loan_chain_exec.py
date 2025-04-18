@@ -1,0 +1,1 @@
+def run(): print('Flash loan strategy active.')

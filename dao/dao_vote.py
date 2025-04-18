@@ -1,0 +1,1 @@
+def vote(): print('DAO vote cast.')
